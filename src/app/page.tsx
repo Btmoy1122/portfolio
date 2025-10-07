@@ -69,7 +69,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-5xl md:text-7xl font-bold leading-tight"
               >
-                <span className="block text-white">Hi, I'm</span>
+                <span className="block text-white">Hi, I&apos;m</span>
                 <span className="block bg-gradient-to-r from-teal-400 via-lime-400 to-gold-400 bg-clip-text text-transparent">
                   Brandon
                 </span>
@@ -272,7 +272,7 @@ export default function Home() {
                 
                 <p>
                   I enjoy creating full-stack applications and have current interest in learning more about AI, Machine Learning, Computer Vision, and Cloud Computing.
-                  I'm apart of the Stony Brook Computing Society E-Board as a Sophmore represenative.
+                  I&apos;m apart of the Stony Brook Computing Society E-Board as a Sophmore represenative.
                   This past summer I did an internship at Get Talky where I developed full-stack features for an AI Conversation Monitoring Platform. 
                   I am currently working on Research on Advanced Programming Methods under Prof. Annie Liu.
                 </p>
