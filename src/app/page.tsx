@@ -290,14 +290,15 @@ export default function Home() {
                 
                 <p>
                   I enjoy creating full-stack applications and have current interest in learning more about AI, Machine Learning, Computer Vision, and Cloud Computing.
-                  I&apos;m apart of the Stony Brook Computing Society E-Board as a Sophmore represenative.
+                  I&apos;m apart of the Stony Brook Computing Society E-Board as a Sophmore representative.
                   This past summer I did an internship at Get Talky where I developed full-stack features for an AI Conversation Monitoring Platform. 
                   I am currently working on Research on Advanced Programming Methods under Prof. Annie Liu.
                 </p>
                 
                 <p>
-                  Now for more interesting information, I enjoy rock climbing (<strong>V8 Highest</strong>), playing volleyball, calisthenics, and playing guitar. 
-                  I also used to be addicted to video games (Starting in 3rd grade with CSGO). The past couple years I mainly played Valorant, Fortnite and League of Legends. In Valorant I reached immortal and in League I reached Emerald in both SR and TFT.
+                  Now, getting away from the technical stuff, I enjoy rock climbing (<strong>V8 Highest</strong>), playing volleyball, calisthenics, and playing guitar. 
+                  I also used to be addicted to video games (Starting in 3rd grade with CSGO). The past couple years I mainly played Valorant, Fortnite and League of Legends, but I&apos;ve also played many other games. 
+                  In Valorant I reached immortal and in League I reached Emerald in both SR and TFT.
                   My greatest achievement in games though is earning over $500 from fortnite competitive tournaments.
                 </p>
               </div>
@@ -404,33 +405,35 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="bg-gray-900/50 backdrop-blur-sm border border-lime-500/20 rounded-2xl p-8 hover:border-lime-500/40 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-8 hover:border-blue-400/60 transition-all duration-300"
               >
                 <div className="flex flex-col lg:flex-row gap-8 items-start">
                   <div className="flex-shrink-0">
-                    <div className="w-20 h-20 bg-gradient-to-br from-lime-500 to-gold-500 rounded-full flex items-center justify-center text-2xl font-bold text-black">
-                      GT
+                    <div className="w-20 h-20 rounded-xl overflow-hidden bg-white flex items-center justify-center border border-blue-200">
+                      <div className="relative w-16 h-16">
+                        <Image src="/get-talky-logo.jpg" alt="Get Talky logo" fill className="object-contain" />
+                      </div>
                     </div>
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                       <div>
-                        <h3 className="text-2xl font-bold text-lime-400 mb-2">Software Engineering Intern</h3>
+                        <h3 className="text-2xl font-bold text-blue-300 mb-2">Software Engineering Intern</h3>
                         <p className="text-xl text-white font-semibold">Get Talky</p>
                       </div>
-                      <span className="text-gold-400 font-medium">May 2025 – August 2025</span>
+                      <span className="text-blue-200 font-medium">May 2025 – August 2025</span>
                     </div>
-                    <p className="text-gray-300 mb-4">
+                    <p className="text-white/80 mb-4">
                       Developed and deployed full-stack features for an AI conversation monitoring platform.
                       Implemented a dynamic comment tracking system with metadata and CSV export capabilities used across 100+ client conversations. 
                       Designed RESTful APIs and optimized data flow to reduce front-end refresh latency by 25%.
                     </p>
-                    <p className="text-gray-300 mb-4">
+                    <p className="text-white/80 mb-4">
                       Collaborated in Agile sprints to enhance schema design, debug endpoints, and automate QA workflows with AskUI to improve efficiency.
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {["JavaScript", "TypeScript", "React", "Node.js", "Express", "PostgreSQL", "REST APIs", "Tailwind CSS", "Jira", "AskUI"].map((tech) => (
-                        <span key={tech} className="px-3 py-1 bg-lime-500/20 text-lime-300 rounded-full text-sm border border-lime-500/30">
+                        <span key={tech} className="px-3 py-1 bg-blue-500/15 text-blue-200 rounded-full text-sm border border-blue-400/30">
                           {tech}
                         </span>
                       ))}
@@ -466,7 +469,7 @@ export default function Home() {
                       Designing and testing provably correct solutions under faculty mentorship to improve performance in complex algorithmic pipelines.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {["Python", "NumPy", "Pandas", "Algorithm Design"].map((tech) => (
+                      {["Python", "Algorithm Design"].map((tech) => (
                         <span key={tech} className="px-3 py-1 bg-gold-500/20 text-gold-300 rounded-full text-sm border border-gold-500/30">
                           {tech}
                         </span>
