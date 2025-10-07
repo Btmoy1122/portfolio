@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -147,11 +148,16 @@ export default function Home() {
                   }}
                   className="absolute inset-0 w-3/4 h-3/4 m-auto rounded-3xl overflow-hidden border-4 border-teal-500/30 shadow-2xl z-10"
                 >
-                  <img 
-                    src="/brandon-main.jpg" 
-                    alt="Brandon Moy - Software Engineer" 
-                    className="w-full h-full object-cover object-center"
-                  />
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/brandon-main.jpg"
+                      alt="Brandon Moy - Software Engineer"
+                      fill
+                      priority
+                      sizes="(min-width: 1024px) 40vw, 80vw"
+                      className="object-cover object-center"
+                    />
+                  </div>
                 </motion.div>
 
                 {/* Top Right Image */}
@@ -168,11 +174,15 @@ export default function Home() {
                   }}
                   className="absolute top-[-24px] right-[-24px] lg:top-[-32px] lg:right-[-32px] w-2/5 h-2/5 rounded-2xl overflow-hidden border-3 border-lime-500/40 shadow-xl z-20"
                 >
-                  <img 
-                    src="/brandon-top.jpg" 
-                    alt="Brandon - Activity Photo" 
-                    className="w-full h-full object-cover object-center"
-                  />
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/brandon-top.jpg"
+                      alt="Brandon - Activity Photo"
+                      fill
+                      sizes="(min-width: 1024px) 20vw, 35vw"
+                      className="object-cover object-center"
+                    />
+                  </div>
                 </motion.div>
 
                 {/* Bottom Right Image */}
@@ -189,11 +199,15 @@ export default function Home() {
                   }}
                   className="absolute bottom-[-24px] right-[-24px] lg:bottom-[-32px] lg:right-[-32px] w-2/5 h-2/5 rounded-2xl overflow-hidden border-3 border-gold-500/40 shadow-xl z-20"
                 >
-                  <img 
-                    src="/brandon-bottom.jpg" 
-                    alt="Brandon - Hobby Photo" 
-                    className="w-full h-full object-cover object-center"
-                  />
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/brandon-bottom.jpg"
+                      alt="Brandon - Hobby Photo"
+                      fill
+                      sizes="(min-width: 1024px) 20vw, 35vw"
+                      className="object-cover object-center"
+                    />
+                  </div>
                 </motion.div>
 
                 {/* Top Left Image */}
@@ -210,11 +224,15 @@ export default function Home() {
                   }}
                   className="absolute top-[-24px] left-[-24px] lg:top-[-32px] lg:left-[-32px] w-2/5 h-2/5 rounded-2xl overflow-hidden border-3 border-purple-500/40 shadow-xl z-20"
                 >
-                  <img 
-                    src="/brandon-left.jpg" 
-                    alt="Brandon - Professional Photo" 
-                    className="w-full h-full object-cover object-center"
-                  />
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/brandon-left.jpg"
+                      alt="Brandon - Professional Photo"
+                      fill
+                      sizes="(min-width: 1024px) 20vw, 35vw"
+                      className="object-cover object-center"
+                    />
+                  </div>
                 </motion.div>
                 
                 {/* Floating elements for visual interest */}
