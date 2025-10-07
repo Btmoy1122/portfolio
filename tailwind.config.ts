@@ -23,6 +23,10 @@ const config: Config = {
           400: "#f59e0b",
           500: "#d97706",
         },
+        purple: {
+          400: "#a855f7",
+          500: "#9333ea",
+        },
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],

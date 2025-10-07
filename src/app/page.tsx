@@ -33,11 +33,11 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-lime-400 bg-clip-text text-transparent"
             >
-              Brandon
+              Brandon Moy
             </motion.div>
             
             <div className="hidden md:flex space-x-8">
-              {["Home", "About", "Projects", "Experience", "Contact"].map((item) => (
+              {["Home", "About", "Experience", "Projects", "Contact"].map((item) => (
                 <motion.a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -53,7 +53,7 @@ export default function Home() {
       </motion.nav>
 
       {/* Hero Section */}
-      <main className="pt-20">
+      <main id="home" className="pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
             {/* Left Side - Text Content */}
@@ -69,7 +69,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-5xl md:text-7xl font-bold leading-tight"
               >
-                <span className="block text-white">I'm</span>
+                <span className="block text-white">Hi, I'm</span>
                 <span className="block bg-gradient-to-r from-teal-400 via-lime-400 to-gold-400 bg-clip-text text-transparent">
                   Brandon
                 </span>
@@ -81,8 +81,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-xl md:text-2xl text-gray-300 leading-relaxed"
               >
-                I'm a full-stack developer with a passion for crafting clean, 
-                functional, and engaging user experiences.
+                CS Honors & Applied Math @ SBU Honors College
               </motion.p>
 
               <motion.div
@@ -92,9 +91,9 @@ export default function Home() {
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <motion.a
-                  href="https://linkedin.com/in/your-profile"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/brandon-moy-495a65278/"
+            target="_blank"
+            rel="noopener noreferrer"
                   whileHover={{ 
                     scale: 1.05,
                     boxShadow: "0 0 30px rgba(0, 119, 181, 0.4)"
@@ -109,9 +108,9 @@ export default function Home() {
                 </motion.a>
                 
                 <motion.a
-                  href="https://github.com/your-username"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="https://github.com/Btmoy1122"
+            target="_blank"
+            rel="noopener noreferrer"
                   whileHover={{ 
                     scale: 1.05,
                     boxShadow: "0 0 30px rgba(0, 0, 0, 0.4)"
@@ -127,15 +126,15 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            {/* Right Side - Avatar/Visual */}
+            {/* Right Side - Image Gallery */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              <div className="relative w-full h-96 lg:h-[500px]">
-                {/* Placeholder for 3D Avatar - we'll add a simple design for now */}
+              <div className="relative w-full h-[520px] lg:h-[600px]">
+                {/* Main Profile Image - Center */}
                 <motion.div
                   animate={{ 
                     y: [0, -10, 0],
@@ -146,14 +145,76 @@ export default function Home() {
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="w-full h-full bg-gradient-to-br from-teal-500/20 to-lime-500/20 rounded-3xl border border-teal-500/30 flex items-center justify-center"
+                  className="absolute inset-0 w-3/4 h-3/4 m-auto rounded-3xl overflow-hidden border-4 border-teal-500/30 shadow-2xl z-10"
                 >
-                  <div className="text-center space-y-4">
-                    <div className="w-32 h-32 mx-auto bg-gradient-to-br from-teal-400 to-lime-400 rounded-full flex items-center justify-center text-4xl">
-                      👨‍💻
-                    </div>
-                    <p className="text-teal-400 font-semibold">3D Avatar Coming Soon</p>
-                  </div>
+                  <img 
+                    src="/brandon-main.jpg" 
+                    alt="Brandon Moy - Software Engineer" 
+                    className="w-full h-full object-cover object-center"
+                  />
+                </motion.div>
+
+                {/* Top Right Image */}
+                <motion.div
+                  animate={{ 
+                    y: [0, -15, 0],
+                    rotate: [0, -3, 0]
+                  }}
+                  transition={{ 
+                    duration: 3.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.8
+                  }}
+                  className="absolute top-[-24px] right-[-24px] lg:top-[-32px] lg:right-[-32px] w-2/5 h-2/5 rounded-2xl overflow-hidden border-3 border-lime-500/40 shadow-xl z-20"
+                >
+                  <img 
+                    src="/brandon-top.jpg" 
+                    alt="Brandon - Activity Photo" 
+                    className="w-full h-full object-cover object-center"
+                  />
+                </motion.div>
+
+                {/* Bottom Right Image */}
+                <motion.div
+                  animate={{ 
+                    y: [0, 10, 0],
+                    rotate: [0, 3, 0]
+                  }}
+                  transition={{ 
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1.2
+                  }}
+                  className="absolute bottom-[-24px] right-[-24px] lg:bottom-[-32px] lg:right-[-32px] w-2/5 h-2/5 rounded-2xl overflow-hidden border-3 border-gold-500/40 shadow-xl z-20"
+                >
+                  <img 
+                    src="/brandon-bottom.jpg" 
+                    alt="Brandon - Hobby Photo" 
+                    className="w-full h-full object-cover object-center"
+                  />
+                </motion.div>
+
+                {/* Top Left Image */}
+                <motion.div
+                  animate={{ 
+                    y: [0, -12, 0],
+                    rotate: [0, 2, 0]
+                  }}
+                  transition={{ 
+                    duration: 3.2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1.5
+                  }}
+                  className="absolute top-[-24px] left-[-24px] lg:top-[-32px] lg:left-[-32px] w-2/5 h-2/5 rounded-2xl overflow-hidden border-3 border-purple-500/40 shadow-xl z-20"
+                >
+                  <img 
+                    src="/brandon-left.jpg" 
+                    alt="Brandon - Professional Photo" 
+                    className="w-full h-full object-cover object-center"
+                  />
                 </motion.div>
                 
                 {/* Floating elements for visual interest */}
@@ -168,7 +229,7 @@ export default function Home() {
                     ease: "easeInOut",
                     delay: 1
                   }}
-                  className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-gold-400 to-lime-400 rounded-full opacity-60"
+                  className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full opacity-60 z-30"
                 />
                 <motion.div
                   animate={{ 
@@ -181,7 +242,7 @@ export default function Home() {
                     ease: "easeInOut",
                     delay: 0.5
                   }}
-                  className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-teal-400 to-gold-400 rounded-full opacity-60"
+                  className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-teal-400 to-lime-400 rounded-full opacity-60 z-30"
                 />
               </div>
             </motion.div>
@@ -203,10 +264,25 @@ export default function Home() {
                   About Me
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 leading-relaxed mb-12">
-                I'm a passionate software engineer with expertise in full-stack development, machine learning, and data science. 
-                I love building innovative solutions that solve real-world problems and create meaningful impact.
-              </p>
+              <div className="text-xl text-gray-300 leading-relaxed mb-12 space-y-6">
+                <p>
+                  I am a current sophmore at Stony Brook University studying Computer Science and Applied Mathematics & Statistics.
+                  I am an Honors college student and on the CS Honors track pursuing a BS.
+                </p>
+                
+                <p>
+                  I enjoy creating full-stack applications and have current interest in learning more about AI, Machine Learning, Computer Vision, and Cloud Computing.
+                  I'm apart of the Stony Brook Computing Society E-Board as a Sophmore represenative.
+                  This past summer I did an internship at Get Talky where I developed full-stack features for an AI Conversation Monitoring Platform. 
+                  I am currently working on Research on Advanced Programming Methods under Prof. Annie Liu.
+                </p>
+                
+                <p>
+                  Now for more interesting information, I enjoy rock climbing (<strong>V8 Highest</strong>), playing volleyball, calisthenics, and playing guitar. 
+                  I also used to be addicted to video games (Starting in 3rd grade with CSGO). The past couple years I mainly played Valorant, Fortnite and League of Legends. In Valorant I reached immortal and in League I reached Emerald in both SR and TFT.
+                  My greatest achievement in games though is earning over $500 from fortnite competitive tournaments.
+                </p>
+              </div>
               
               {/* Tech Stack Display */}
               <motion.div
@@ -363,7 +439,7 @@ export default function Home() {
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                       <div>
                         <h3 className="text-2xl font-bold text-gold-400 mb-2">Undergraduate Researcher</h3>
-                        <p className="text-xl text-white font-semibold">Advanced Programming Methods & Applications Lab</p>
+                        <p className="text-xl text-white font-semibold">Advanced Programming Methods & Applications Lab, SBU</p>
                       </div>
                       <span className="text-gold-400 font-medium">September 2025 – Present</span>
                     </div>
@@ -419,7 +495,24 @@ export default function Home() {
                   <div className="text-6xl">📊</div>
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-teal-400 mb-4">Course Planning Visualizer & Professor Insight Chatbot</h3>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                    <h3 className="text-2xl font-bold text-teal-400 mb-2">Course Planning Visualizer & Professor Insight Chatbot</h3>
+                    <motion.a
+                      href="https://github.com/eduardoloz/bulletin-website"
+          target="_blank"
+          rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      className="text-teal-300 hover:text-teal-400 transition-colors duration-300 flex items-center gap-2"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                      </svg>
+                      View on GitHub
+                    </motion.a>
+                  </div>
+                  <p className="text-gray-300 mb-4">
+                    <span className="text-teal-400 font-semibold">Contributors:</span> Eduardo Lozano, Karina Lam, Timothy Liang, Sam
+                  </p>
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     Developed an interactive prerequisite visualization tool that helps computer science students plan course sequences.
                     Implemented dynamic D3.js graphs that color-code courses based on completion status. Built a data pipeline to scrape RateMyProfessors reviews and served them via an Express API.
@@ -448,7 +541,24 @@ export default function Home() {
                   <div className="text-6xl">🧠</div>
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-lime-400 mb-4">Breast Tumor Classifier Web App</h3>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                    <h3 className="text-2xl font-bold text-lime-400 mb-2">Breast Tumor Classifier Web App</h3>
+                    <motion.a
+                      href="https://github.com/Harrisaint/Cancer-Histology-Detection"
+          target="_blank"
+          rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      className="text-lime-300 hover:text-lime-400 transition-colors duration-300 flex items-center gap-2"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                      </svg>
+                      View on GitHub
+                    </motion.a>
+                  </div>
+                  <p className="text-gray-300 mb-4">
+                    <span className="text-lime-400 font-semibold">Contributors:</span> Harry Martin
+                  </p>
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     Built a deep learning web app that classifies breast tumor histopathology images using a fine-tuned MobileNetV2 model.
                     Integrated a FastAPI backend for real-time inference and a Next.js frontend for seamless image uploads, model predictions, and session tracking.
@@ -477,7 +587,21 @@ export default function Home() {
                   <div className="text-6xl">📈</div>
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gold-400 mb-4">Financial Sentiment Analysis Dashboard</h3>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                    <h3 className="text-2xl font-bold text-gold-400 mb-2">Financial Sentiment Analysis Dashboard</h3>
+                    <motion.a
+                      href="https://github.com/Btmoy1122/FinancialSentiment"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      className="text-gold-300 hover:text-gold-400 transition-colors duration-300 flex items-center gap-2"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                      </svg>
+                      View on GitHub
+                    </motion.a>
+                  </div>
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     Created an AI-powered financial dashboard that performs sentiment analysis on Reddit and Yahoo Finance discussions.
                     Implemented FinBERT NLP models for financial tone detection and visualized results using interactive Plotly charts and KPI metrics.
@@ -486,6 +610,56 @@ export default function Home() {
                   <div className="flex flex-wrap gap-2">
                     {["Python", "Streamlit", "Plotly", "ProsusAI/FinBERT", "yfinance", "PRAW"].map((tech) => (
                       <span key={tech} className="px-3 py-1 bg-gold-500/20 text-gold-300 rounded-full text-sm border border-gold-500/30">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* HealthBot AI */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02, y: -5 }}
+                className="bg-gray-900/50 backdrop-blur-sm border border-purple-500/20 rounded-2xl overflow-hidden hover:border-purple-500/40 transition-all duration-300"
+              >
+                <div className="h-64 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                  <div className="text-6xl">🩺</div>
+                </div>
+                <div className="p-8">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                    <h3 className="text-2xl font-bold text-purple-400 mb-2">HealthBot AI – Comprehensive Health & Wellness Platform</h3>
+                    <motion.a
+                      href="https://github.com/Btmoy1122/HopperHacks"
+          target="_blank"
+          rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      className="text-purple-300 hover:text-purple-400 transition-colors duration-300 flex items-center gap-2"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                      </svg>
+                      View on GitHub
+                    </motion.a>
+                  </div>
+                  <p className="text-gray-300 mb-4">
+                    <span className="text-purple-400 font-semibold">Contributors:</span> Charles Cheung, Harry Martin
+                  </p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    Developed during HopperHacks, HealthBot AI is an interactive healthcare platform that combines mental and physical wellness tools into one intuitive web experience.
+                    Users can schedule medical appointments through an interactive calendar, chat with an AI healthcare assistant for symptom guidance and treatment recommendations, and even log daily journals using text or voice input — all stored securely with database-backed persistence.
+                  </p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    Integrated a multilingual, voice-enabled chatbot powered by the OpenAI API to support accessible healthcare conversations.
+                    Added a guided breathing module with customizable intervals and visual feedback to encourage mindfulness and stress relief.
+                    Collaborated as a beginner team to design the full-stack architecture, overcoming initial front-end and integration challenges while learning API integration, UI/UX design, and Git-based collaboration.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Python", "JavaScript", "React", "Node.js", "Express.js", "Flask", "SQL", "OpenAI API", "HTML", "CSS"].map((tech) => (
+                      <span key={tech} className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm border border-purple-500/30">
                         {tech}
                       </span>
                     ))}
@@ -508,27 +682,17 @@ export default function Home() {
             >
               <h2 className="text-4xl md:text-6xl font-bold mb-8">
                 <span className="bg-gradient-to-r from-teal-400 via-lime-400 to-gold-400 bg-clip-text text-transparent">
-                  Let's Work Together
+                  Contact Me
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 mb-12">
-                Ready to bring your ideas to life? Let's discuss your next project.
-              </p>
-              
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="inline-block"
-              >
-                <motion.button
-                  whileHover={{ 
-                    boxShadow: "0 0 30px rgba(20, 184, 166, 0.4)"
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-teal-500 to-lime-500 text-black px-12 py-4 rounded-full font-bold text-xl hover:shadow-xl transition-all duration-300"
-                >
-                  Get In Touch
-                </motion.button>
-              </motion.div>
+              <div className="space-y-4">
+                <p className="text-xl text-gray-300">
+                  <span className="text-teal-400 font-semibold">Email:</span> btmoy1121@gmail.com
+                </p>
+                <p className="text-xl text-gray-300">
+                  <span className="text-lime-400 font-semibold">Discord:</span> btmoy1121
+                </p>
+              </div>
             </motion.div>
           </div>
         </section>
