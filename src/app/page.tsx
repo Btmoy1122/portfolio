@@ -511,6 +511,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="bg-gray-900/50 backdrop-blur-sm border border-teal-500/20 rounded-2xl overflow-hidden hover:border-teal-500/40 transition-all duration-300"
+                style={{ touchAction: 'pan-y' }}
               >
                 <div className="h-64 bg-gradient-to-br from-teal-500 to-lime-500 flex items-center justify-center">
                   <div className="text-6xl">📊</div>
@@ -557,6 +558,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="bg-gray-900/50 backdrop-blur-sm border border-lime-500/20 rounded-2xl overflow-hidden hover:border-lime-500/40 transition-all duration-300"
+                style={{ touchAction: 'pan-y' }}
               >
                 <div className="h-64 bg-gradient-to-br from-lime-500 to-gold-500 flex items-center justify-center">
                   <div className="text-6xl">🧠</div>
@@ -603,6 +605,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="bg-gray-900/50 backdrop-blur-sm border border-gold-500/20 rounded-2xl overflow-hidden hover:border-gold-500/40 transition-all duration-300"
+                style={{ touchAction: 'pan-y' }}
               >
                 <div className="h-64 bg-gradient-to-br from-gold-500 to-teal-500 flex items-center justify-center">
                   <div className="text-6xl">📈</div>
@@ -646,6 +649,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="bg-gray-900/50 backdrop-blur-sm border border-purple-500/20 rounded-2xl overflow-hidden hover:border-purple-500/40 transition-all duration-300"
+                style={{ touchAction: 'pan-y' }}
               >
                 <div className="h-64 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
                   <div className="text-6xl">🩺</div>
