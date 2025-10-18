@@ -403,9 +403,10 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true, margin: "-100px" }}
                 className="bg-white/5 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-8 hover:border-blue-400/60 transition-all duration-300"
+                style={{ touchAction: 'pan-y' }}
               >
                 <div className="flex flex-col lg:flex-row gap-8 items-start">
                   <div className="flex-shrink-0">
@@ -446,9 +447,10 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+                viewport={{ once: true, margin: "-100px" }}
                 className="bg-gray-900/50 backdrop-blur-sm border border-gold-500/20 rounded-2xl p-8 hover:border-gold-500/40 transition-all duration-300"
+                style={{ touchAction: 'pan-y' }}
               >
                 <div className="flex flex-col lg:flex-row gap-8 items-start">
                   <div className="flex-shrink-0">
@@ -488,8 +490,8 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-100px" }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-6xl font-bold mb-8">
@@ -507,8 +509,8 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true, margin: "-50px" }}
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="bg-gray-900/50 backdrop-blur-sm border border-teal-500/20 rounded-2xl overflow-hidden hover:border-teal-500/40 transition-all duration-300"
                 style={{ touchAction: 'pan-y' }}
@@ -554,8 +556,8 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="bg-gray-900/50 backdrop-blur-sm border border-lime-500/20 rounded-2xl overflow-hidden hover:border-lime-500/40 transition-all duration-300"
                 style={{ touchAction: 'pan-y' }}
@@ -601,8 +603,8 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true, margin: "-50px" }}
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="bg-gray-900/50 backdrop-blur-sm border border-gold-500/20 rounded-2xl overflow-hidden hover:border-gold-500/40 transition-all duration-300"
                 style={{ touchAction: 'pan-y' }}
@@ -645,8 +647,8 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+                viewport={{ once: true, margin: "-50px" }}
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="bg-gray-900/50 backdrop-blur-sm border border-purple-500/20 rounded-2xl overflow-hidden hover:border-purple-500/40 transition-all duration-300"
                 style={{ touchAction: 'pan-y' }}

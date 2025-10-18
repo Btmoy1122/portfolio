@@ -68,4 +68,16 @@ body {
   html {
     -webkit-overflow-scrolling: touch;
   }
+  
+  /* Prevent scroll jumping from animations */
+  body {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Disable momentum scrolling issues */
+  * {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
 }
