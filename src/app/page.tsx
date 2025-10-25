@@ -284,13 +284,13 @@ export default function Home() {
               </h2>
               <div className="text-xl text-gray-300 leading-relaxed mb-12 space-y-6">
                 <p>
-                  I am a current sophmore at Stony Brook University studying Computer Science and Applied Mathematics & Statistics.
+                  I am a current student at Stony Brook University studying Computer Science and Applied Mathematics & Statistics.
                   I am an Honors college student and on the CS Honors track pursuing a BS.
                 </p>
                 
                 <p>
                   I enjoy creating full-stack applications and have current interest in learning more about AI, Machine Learning, Computer Vision, and Cloud Computing.
-                  I&apos;m apart of the Stony Brook Computing Society E-Board as a Sophmore representative.
+                  I&apos;m apart of the Stony Brook Computing Society E-Board as a representative.
                   This past summer I did an internship at Get Talky where I developed full-stack features for an AI Conversation Monitoring Platform. 
                   I am currently working on Research on Advanced Programming Methods under Prof. Annie Liu.
                 </p>
