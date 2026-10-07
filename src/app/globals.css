@@ -59,25 +59,7 @@ body {
 
 /* Mobile-specific fixes */
 @media (max-width: 768px) {
-  /* Disable hover effects on mobile to prevent scroll conflicts */
   * {
     -webkit-tap-highlight-color: transparent;
-  }
-  
-  /* Ensure smooth scrolling on mobile */
-  html {
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  /* Prevent scroll jumping from animations */
-  body {
-    overscroll-behavior: none;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  /* Disable momentum scrolling issues */
-  * {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
   }
 }

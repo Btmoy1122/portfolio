@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Brandon - Full-Stack Developer & Designer",
-  description: "I'm a full-stack developer with a passion for crafting clean, functional, and engaging user experiences.",
+  title: "Brandon Moy",
+  description:
+    "Junior studying Computer Science and Applied Math at Stony Brook University, building full-stack apps, backend systems, and doing algorithms research.",
 };
 
 export default function RootLayout({
